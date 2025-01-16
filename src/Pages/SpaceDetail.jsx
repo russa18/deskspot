@@ -162,7 +162,7 @@ const SpaceDetail = () => {
           </div>
         </div>
         <img
-          src="images/home-header.jpg"
+          src="/images/home-header.jpg"
           alt=""
           className="sm:h-[500px] w-full rounded-t-lg blur-sm object-cover hidden sm:block"
         />
