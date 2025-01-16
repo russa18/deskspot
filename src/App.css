@@ -1,0 +1,187 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav,
+footer,
+.layout {
+  background:  #313131;
+}
+
+.view-details-button {
+  margin: 0.5rem 0;
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 120px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.view-details-button:active,
+.view-details-button:hover {
+  outline: 0;
+}
+
+.view-details-button span {
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  padding: 8px 16px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.view-details-button:hover span,
+.view-details-button:hover {
+  background-image: linear-gradient(144deg, #00ddeb, #5b42f3 50%, #af40ff);
+  transform: scale(1.01);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Set the track (background) color */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the thumb (scroll handle) color */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* Optional: add a border to the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color for the thumb when hovering */
+}
+
+/* From Uiverse.io by Gaurav-WebDev */
+.apply-btn {
+  height: 50px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  margin: auto;
+  box-shadow: 6px 6px 20px 0px;
+}
+
+.apply-btn:hover {
+  box-shadow: 0.5px 0.5px 150px #252525;
+}
+
+.type1::after {
+  content: "Apply Now !";
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  margin: auto;
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(50px);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1::before {
+  content: "Apply";
+  height: 50px;
+  width: 100%;
+  background-image: linear-gradient(144deg, #00ddeb, #5b42f3 50%, #af40ff);
+  color: #fff;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  transform: translateY(0px) scale(1.2);
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.type1:hover::after {
+  transform: translateY(0) scale(1.2);
+}
+
+.type1:hover::before {
+  transform: translateY(-50px) scale(0) rotate(120deg);
+}
+
+
+
+/* From Uiverse.io by reshades */ 
+.booknow-button {
+  background-color: #ffffff00;
+  color: #fff;
+   border: #039e53 2px solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+  padding: 5px 6px;
+}
+
+.booknow-button:hover {
+  background-color: #039e53;
+  cursor: pointer;
+}
+
+.booknow-button svg {
+  width: 20px;
+   position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.booknow-button:hover svg {
+  transform: translateX(4px);
+}
+
+.booknow-text {
+  margin: 0 0 0 1.5em 
+}
