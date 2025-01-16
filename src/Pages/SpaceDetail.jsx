@@ -9,7 +9,7 @@ import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import StarRatings from "../Components/StarRatings";
 import ReviewCard from "../Components/ReviewCard";
-import Ratings from "../Components/ratings";
+import Ratings from "../Components/Ratings";
 import { useParams } from "react-router-dom";
 import useStore from "../store/useStore";
 import useReviewPost from "../store/spaceReviewsStore";
