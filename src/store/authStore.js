@@ -8,10 +8,8 @@ import { create } from "zustand";
 import { auth, db, googleProvider } from "../config/firebase-config";
 import {
   arrayUnion,
-  collection,
   doc,
   getDoc,
-  getDocs,
   setDoc,
   updateDoc,
 } from "firebase/firestore";

@@ -1,5 +1,4 @@
 import { useEffect, useState, useMemo } from "react";
-import ReviewCard from "../Components/ReviewCard";
 import useReviewPost from "../store/spaceReviewsStore";
 import useAuthStore from "../store/authStore";
 import Spinner from "../Components/Spinner";
