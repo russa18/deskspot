@@ -56,7 +56,7 @@ const Login = () => {
       {/* Left Side Image */}
       <div className="h-full">
         <img
-          src="/src/assets/images/login.jpg"
+          src="/images/login.jpg"
           alt="login"
           className="w-full object-cover sm:rounded-lg"
         />

@@ -6,7 +6,6 @@ import SpaceCard from "../Components/SpaceCard";
 // import { db } from "../config/firebase-config";
 import useStore from "../store/useStore";
 import Spinner from "../Components/Spinner";
-import homeHeaderImage from '@/assets/images/home-header-2.jpg';
 
 const Home = () => {
   // const [placeholder, setPlaceholder] = useState("Location");
@@ -91,10 +90,9 @@ const Home = () => {
           </h2>
         </div>
         <img
-          src={homeHeaderImage}
-          alt="header"
+          src="/images/home-header-2.jpg"
+          alt=""
           className="h-[50vh] md:h-[80vh] w-full object-cover sm:rounded-lg"
-          loading="lazy"
         />
       </div>
 

@@ -69,7 +69,7 @@ const Register = () => {
     <div className="h-full grid grid-cols-1 sm:grid-cols-2 gap-8 p-4 sm:p-8">
       <div className="h-full">
         <img
-          src="/src/assets/images/login.jpg"
+          src="/images/login.jpg"
           alt="register"
           className="w-full object-cover sm:rounded-lg"
         />

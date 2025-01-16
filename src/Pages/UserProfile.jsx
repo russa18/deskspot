@@ -62,7 +62,7 @@ const UserProfile = () => {
     <div>
       <div className="relative h-[200px] md:h-[300px] mb-[5rem]">
         <img
-          src="/src/assets/images/home-header.jpg"
+          src="/images/home-header.jpg"
           alt="cover "
           className="h-[150px] md:h-[200px] w-full object-cover rounded-md"
         />
