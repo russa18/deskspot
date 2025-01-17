@@ -86,8 +86,8 @@ const UserProfile = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 my-12 border-t-2 pt-8 md:pt-[5rem]">
-        <div className="text-white w-[300px] max-w-[500px] ms-auto bg-gray-600 me-12 p-4 md:p-8 rounded-md mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-8 md:mx-0 my-12 border-t-2 pt-8 md:pt-[5rem]">
+        <div className="text-white w-full md:max-w-[300px] ms-auto bg-gray-600 md:me-12 p-4 md:p-4 rounded-md mb-4">
           <div className="text-center text-2xl font-bold">Favorites</div>
 
           <div className="grid grid-cols-1 gap-4 overflow-y-auto h-[500px] p-[1rem]">
@@ -130,7 +130,7 @@ const UserProfile = () => {
           </div>
         </div>
 
-        <div className="max-w-[500px] w-full p-4">
+        <div className=" md:max-w-[500px] w-full mt-8 md:mt-0 md:p-4">
           <h2 className="text-4xl text-white">My Reviews</h2>
           <div className="my-8 overflow-y-auto h-[500px]">
             {loading ? (
@@ -142,12 +142,12 @@ const UserProfile = () => {
               myReviewsList?.map((review, i) => (
                 <div
                   key={i}
-                  className="my-4 w-full max-w-[500px] text-white px-4"
+                  className="my-4 w-full md:max-w-[500px] text-white pe-4 md:px-4 "
                 >
-                  <div className="p-4 bg-[#313131] rounded-lg flex flex-row">
-                    <div className=" basis-1/5">
+                  <div className="p-4 bg-[#313131] rounded-lg flex flex-col  md:flex-row">
+                    <div className=" basis-1/5 ">
                       <div
-                        className="relative rounded-sm  sm:w-[5rem] sm:h-[5rem] flex justify-center items-center  mx-auto"
+                        className="relative rounded-sm w-full sm:w-[5rem] sm:h-[5rem] flex justify-center items-center  mx-auto"
                         title="profile"
                       >
                         {
@@ -159,15 +159,15 @@ const UserProfile = () => {
                               "/images/profile-placeholder.webp"
                             }
                             alt={`${review?.username}'s profile`}
-                            className="rounded-sm sm:w-[5rem] sm:h-[5rem] object-fill"
+                            className="rounded-sm h-full w-full sm:w-[5rem] sm:h-[5rem] object-fill"
                             loading="lazy"
                           />
                         }
                       </div>
                     </div>
-                    <div className="basis-4/5 ms-2">
+                    <div className="basis-4/5 ms-4">
                       <div className="flex flex-col">
-                        <div>
+                        <div className=" text-2xl font-bold mt-4 md:mt-0">
                           {reviewedWs.find((ws) => ws.id === review.workspaceId)
                             ?.name || " "}
                           <StarRatings rating={review?.rating} />
