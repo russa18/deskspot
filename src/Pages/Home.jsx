@@ -71,8 +71,8 @@ const Home = () => {
   return (
     <div className="home max-w-screen-xl m-auto  p-4 sm:p-8 ">
       <div className="relative w-full">
-        <div className="absolute inset-0   flex flex-col items-center justify-center p-4">
-          <h1 className="text-white text-4xl my-4">
+        <div className="absolute inset-0   flex flex-col items-center md:justify-center p-4">
+          <h1 className="text-white text-4xl my-4 font-bold bg-green-500 p-4 bg-opacity-80">
             Explore the best co-working spaces near you !
           </h1>
 
@@ -92,12 +92,13 @@ const Home = () => {
         <img
           src="/images/home-header-2.jpg"
           alt=""
-          className="h-[50vh] md:h-[80vh] w-full object-cover sm:rounded-lg"
+          className="h-[80vh] md:h-[50vh] w-full object-cover sm:rounded-lg"
+          loading="lazy"
         />
       </div>
 
       <div className="popular-section  py-8 rounded-lg ">
-        <div className="flex my-8">
+        <div className="flex mb-8">
           <h3 className="text-3xl text-white font-bold me-8">
             {searched && searchTxt.length > 0
               ? "Search Results.."

@@ -47,7 +47,6 @@ const Register = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      
       await loginWithGoogle(username, phoneno);
 
       if (!error) {
@@ -56,7 +55,7 @@ const Register = () => {
       }
     } catch (err) {
       toast.error("Error during Google login:", err.message);
-     }
+    }
   };
 
   // Email validation helper
@@ -72,48 +71,46 @@ const Register = () => {
           src="/images/login.jpg"
           alt="register"
           className="w-full object-cover sm:rounded-lg"
+          loading="lazy"
         />
       </div>
-      <div
-        className="bg-[#313131] p-4 sm:p-8 rounded-lg text-white"
-       
-      >
+      <div className="bg-[#313131] p-4 sm:p-8 rounded-lg text-white">
         <h2 className="text-2xl my-4 font-bold">Register</h2>
-      
-      <form  onSubmit={handleRegister}>
-        <InputField
-          inpLabel="Username"
-          inpType="text"
-          value={username}
-          func={(e) => setUsername(e.target.value)}
-        />
-        <InputField
-          inpLabel="Phone number"
-          inpType="tel"
-          value={phoneno}
-          func={(e) => setPhoneno(e.target.value)}
-        />
-        <InputField
-          inpLabel="Email"
-          inpType="email"
-          value={email}
-          func={(e) => setEmail(e.target.value)}
-        />
-        <InputField
-          inpLabel="Password"
-          inpType="password"
-          value={password}
-          func={(e) => setPassword(e.target.value)}
-        />
 
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        <form onSubmit={handleRegister}>
+          <InputField
+            inpLabel="Username"
+            inpType="text"
+            value={username}
+            func={(e) => setUsername(e.target.value)}
+          />
+          <InputField
+            inpLabel="Phone number"
+            inpType="tel"
+            value={phoneno}
+            func={(e) => setPhoneno(e.target.value)}
+          />
+          <InputField
+            inpLabel="Email"
+            inpType="email"
+            value={email}
+            func={(e) => setEmail(e.target.value)}
+          />
+          <InputField
+            inpLabel="Password"
+            inpType="password"
+            value={password}
+            func={(e) => setPassword(e.target.value)}
+          />
 
-        <button
-          disabled={loading}
-          className="bg-[#039e53] hover:bg-green-500 transition-colors p-2 rounded-lg text-white font-bold text-sm w-full"
-        >
-          {loading ? "Registering..." : "Register"}
-        </button>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+
+          <button
+            disabled={loading}
+            className="bg-[#039e53] hover:bg-green-500 transition-colors p-2 rounded-lg text-white font-bold text-sm w-full"
+          >
+            {loading ? "Registering..." : "Register"}
+          </button>
         </form>
         <p className="mt-2">
           Already have an account?

@@ -23,11 +23,10 @@ const Login = () => {
       return;
     }
     const success = await login(email, password);
- 
+
     if (success) {
       navigate("/", { replace: true });
       toast.success("Logged in successfully");
-
     } else {
       toast.error("Login failed. Please check your credentials.");
     }
@@ -59,6 +58,7 @@ const Login = () => {
           src="/images/login.jpg"
           alt="login"
           className="w-full object-cover sm:rounded-lg"
+          loading="lazy"
         />
       </div>
 

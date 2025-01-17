@@ -133,22 +133,21 @@ const SpaceDetail = () => {
 
   return (
     <div className="text-white pb-8">
-
       <div className="relative">
-        <div className="absolute top-2 right-2 z-10">
-          <StarRatings rating={space.rating} />
-          <p className="mb-4">${space.price}/h</p>
+        <div className="md:absolute top-2 right-2 z-10 flex justify-between p-2">
+          <div className="flex flex-col me-4">
+            <StarRatings rating={space.rating} />
+            <p className="mb-4">${space.price}/h</p>
+          </div>
           {/* <button  onClick={addFavorites}>fav</button> */}
-          
-          <div className={` ${
-            user?.email ? "  rating" : "hidden"
-          }`} >
+
+          <div className={` ${user?.email ? "  rating" : "hidden"}`}>
             <input
               type="radio"
               id={`favorite`}
               name="favorite-radio"
               value=""
-              onChange={addFavorites } // Set rating when clicked
+              onChange={addFavorites} // Set rating when clicked
               checked={isFavorite}
             />
             <label htmlFor={`favorite`}>
@@ -163,20 +162,21 @@ const SpaceDetail = () => {
         </div>
         <img
           src="/images/home-header.jpg"
-          alt=""
+          alt="header"
           className="sm:h-[500px] w-full rounded-t-lg blur-sm object-cover hidden sm:block"
+          loading="lazy"
         />
 
-        <div className="sm:absolute top-[10%] left-[5%] px-4">
-          <h2 className="text-4xl sm:text-8xl font-bold">{space.name}</h2>
+        <div className="sm:absolute top-[10%] left-[5%] px-4 md:max-w-[80%]">
+          <h2 className="text-4xl sm:text-8xl font-bold mb-2">{space.name}</h2>
           <h4 className="text-lg">
             {space.location[0]} | {space.location[1]}
           </h4>
-          <div className="mt-8 p-4 rounded-lg bg-black/20 backdrop-blur-sm text-white sm:w-[80%]">
+          <div className="mt-4 py-4 md:p-4 rounded-lg bg-black/20 backdrop-blur-sm text-white sm:w-[80%]">
             {space.longDescription}
           </div>
 
-          <div className="mt-8 w-full max-w-[600px] flex flex-wrap">
+          <div className="mt-4 w-full max-w-[600px] flex flex-wrap">
             {space &&
             Array.isArray(space.amenities) &&
             space.amenities.length > 0 ? (
@@ -214,7 +214,12 @@ const SpaceDetail = () => {
           >
             {space.images.map((img, i) => (
               <SwiperSlide className="h-full" key={i}>
-                <img src={`${img}`} className="h-full w-full object-fill" />
+                <img
+                  src={`${img}`}
+                  className="h-full w-full object-fill"
+                  alt="swiper"
+                  loading="lazy"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
@@ -233,12 +238,17 @@ const SpaceDetail = () => {
           >
             {space.images.map((img, i) => (
               <SwiperSlide className="h-full" key={i}>
-                <img src={`${img}`} className="h-full w-full object-fill" />
+                <img
+                  src={`${img}`}
+                  className="h-[150px] w-full object-fill"
+                  alt="swiper"
+                  loading="lazy"
+                />
               </SwiperSlide>
             ))}
           </Swiper>
         </div>
-        <div className="p-4 mt-2 sm:mt-8 ">
+        <div className="py-4 mt-2 sm:mt-8 ">
           <h5 className="text-2xl sm:text-4xl font-bold mb-4">{space.name}</h5>
           <p className="text-2xl mb-4">
             {space.location[0]} | {space.location[1]}
@@ -312,12 +322,14 @@ const SpaceDetail = () => {
         <form
           onSubmit={handlePostReview}
           className={` ${
-            user?.email ? "flex flex-col items-center md:flex-row my-4  md:justify-end" : "hidden"
+            user?.email
+              ? "flex flex-col items-center md:flex-row my-4  md:justify-end"
+              : "hidden"
           }`}
         >
           <Ratings />
 
-          <div className="messageBox mt-2">
+          <div className="messageBox mt-2 !w-full md:!w-fit">
             <div className="fileUploadWrapper">
               <label htmlFor="file">
                 <svg

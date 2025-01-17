@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import "./Components/Components.css"
+import "./Components/Components.css";
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -24,7 +24,6 @@ const router = createBrowserRouter(
       <Route path="login" element={<Login />} />
       <Route path="space-detail/:id" element={<SpaceDetail />} />
       <Route path="my-profile" element={<UserProfile />} />
-
     </Route>
   )
 );

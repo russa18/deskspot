@@ -6,13 +6,7 @@ import {
 } from "firebase/auth";
 import { create } from "zustand";
 import { auth, db, googleProvider } from "../config/firebase-config";
-import {
-  arrayUnion,
-  doc,
-  getDoc,
-  setDoc,
-  updateDoc,
-} from "firebase/firestore";
+import { arrayUnion, doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
 
 // Helper function to handle errors
 const getErrorMessage = (error) => {
@@ -159,10 +153,10 @@ const useAuthStore = create((set) => ({
     }
   },
 
-  addToFavWorkspace: async ( workspaceId,userId) => {
+  addToFavWorkspace: async (workspaceId, userId) => {
     try {
       //  console.log(workspaceId);
-       
+
       const userDocRef = doc(db, "users", userId); // Reference to the user's document
       await updateDoc(userDocRef, {
         favWorkspace: arrayUnion(workspaceId), // Add workspaceId to the array

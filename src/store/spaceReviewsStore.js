@@ -6,7 +6,7 @@ import { persist } from "zustand/middleware";
 const useReviewPost = create(
   persist((set) => ({
     reviews: [],
-    rating:null,
+    rating: null,
     loading: false,
     error: null,
 
@@ -68,7 +68,7 @@ const useReviewPost = create(
       }
     },
 
-    setRating:async(newRating) => set({ rating: newRating })
+    setRating: async (newRating) => set({ rating: newRating }),
   }))
 );
 

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-function SearchBox({txtFunc,searchFn}) {
+function SearchBox({ txtFunc, searchFn }) {
   // const [placeholder, setPlaceholder] = useState("Location ");
   const inputRef = useRef(null);
 
@@ -33,8 +33,8 @@ function SearchBox({txtFunc,searchFn}) {
         placeholder="Search Location or Workspace name "
         id=""
         onChange={(e) => {
-          txtFunc(e);   
-          searchFn();   
+          txtFunc(e);
+          searchFn();
         }}
         autoFocus
       />

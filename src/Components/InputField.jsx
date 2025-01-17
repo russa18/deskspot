@@ -1,4 +1,4 @@
-const InputField = ({ inpLabel, inpType = "text",func }) => {
+const InputField = ({ inpLabel, inpType = "text", func }) => {
   return (
     <div className="input-group flex flex-col my-4">
       <label htmlFor={inpLabel} className="text-sm mb-2">

@@ -1,7 +1,6 @@
- import StarRatings from "./StarRatings";
+import StarRatings from "./StarRatings";
 
-const ReviewCard = ({ data,id}) => {
-
+const ReviewCard = ({ data, id }) => {
   if (!data) {
     return <>No reviews</>;
   }
@@ -17,8 +16,21 @@ const ReviewCard = ({ data,id}) => {
             alt={`${data?.username} profile`}
             className="rounded-sm sm:w-[5rem] sm:h-[5rem] object-fill"
           /> */}
-          {  <img src={data?.profileImg ? data?.profileImg :"/images/profile-placeholder.webp"} alt={`${data?.username}'s profile`}   className="rounded-sm sm:w-[5rem] sm:h-[5rem] object-fill"   onError={(e) => { e.target.src = '/images/profile-placeholder.webp'; }} />}
-
+          {
+            <img
+              loading="lazy"
+              src={
+                data?.profileImg
+                  ? data?.profileImg
+                  : "/images/profile-placeholder.webp"
+              }
+              alt={`${data?.username}'s profile`}
+              className="rounded-sm sm:w-[5rem] sm:h-[5rem] object-fill"
+              onError={(e) => {
+                e.target.src = "/images/profile-placeholder.webp";
+              }}
+            />
+          }
         </div>
       </div>
       <div className="basis-4/5 ms-2">
@@ -37,6 +49,7 @@ const ReviewCard = ({ data,id}) => {
                 alt="reviews"
                 className="  object-contain"
                 key={i}
+                loading="lazy"
               />
             ))}
           </div>

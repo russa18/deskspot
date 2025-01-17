@@ -11,14 +11,13 @@ import { getFirestore } from "firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBEnSCwOI3IrmxV5gjc9wbpgL1giKVtI1I",
-  authDomain:"deskstop-ddc43.firebaseapp.com",
+  authDomain: "deskstop-ddc43.firebaseapp.com",
   projectId: "deskstop-ddc43",
   storageBucket: "deskstop-ddc43.appspot.com",
   messagingSenderId: "441531143894",
   appId: "1:441531143894:web:67b882fc88ad2e3f3adb77",
   measurementId: "G-SFLPHNCVG7",
 };
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

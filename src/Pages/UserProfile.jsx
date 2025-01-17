@@ -65,6 +65,7 @@ const UserProfile = () => {
           src="/images/home-header.jpg"
           alt="cover "
           className="h-[150px] md:h-[200px] w-full object-cover rounded-md"
+          loading="lazy"
         />
 
         <div className="absolute  bottom-[5%] left-1/2 transform -translate-x-1/2 rounded-full w-[10rem] h-[10rem] md:w-[15rem] md:h-[15rem]">
@@ -76,6 +77,7 @@ const UserProfile = () => {
             }`}
             alt="profile pic"
             className="rounded-full w-full h-full object-cover"
+            loading="lazy"
           />
 
           <p className="text-white text-center my-4 text-3xl font-bold">
@@ -84,8 +86,8 @@ const UserProfile = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 my-12 border-t-2 pt-[5rem]">
-        <div className="text-white w-[300px] max-w-[500px] ms-auto bg-gray-500 me-12 p-8 rounded-md mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 my-12 border-t-2 pt-8 md:pt-[5rem]">
+        <div className="text-white w-[300px] max-w-[500px] ms-auto bg-gray-600 me-12 p-4 md:p-8 rounded-md mb-4">
           <div className="text-center text-2xl font-bold">Favorites</div>
 
           <div className="grid grid-cols-1 gap-4 overflow-y-auto h-[500px] p-[1rem]">
@@ -102,6 +104,7 @@ const UserProfile = () => {
                         src={fav.profileImg}
                         alt={fav.name}
                         className="w-full h-[8rem] rounded-t-lg object-cover"
+                        loading="lazy"
                       />
                       <div className="flex justify-between flex-col w-full p-2   text-white  ">
                         <p className="  p-1 rounded-lg">${fav.price}/h</p>
@@ -137,7 +140,10 @@ const UserProfile = () => {
               </div>
             ) : myReviewsList?.length > 0 ? (
               myReviewsList?.map((review, i) => (
-                <div key={i} className="my-4 w-full max-w-[500px] text-white px-4">
+                <div
+                  key={i}
+                  className="my-4 w-full max-w-[500px] text-white px-4"
+                >
                   <div className="p-4 bg-[#313131] rounded-lg flex flex-row">
                     <div className=" basis-1/5">
                       <div
@@ -145,15 +151,18 @@ const UserProfile = () => {
                         title="profile"
                       >
                         {
-                          
                           <img
-                            src={(reviewedWs.find((ws) => ws.id === review.workspaceId) ?.profileImg || "/images/profile-placeholder.webp") }
-
+                            src={
+                              reviewedWs.find(
+                                (ws) => ws.id === review.workspaceId
+                              )?.profileImg ||
+                              "/images/profile-placeholder.webp"
+                            }
                             alt={`${review?.username}'s profile`}
                             className="rounded-sm sm:w-[5rem] sm:h-[5rem] object-fill"
+                            loading="lazy"
                           />
                         }
-
                       </div>
                     </div>
                     <div className="basis-4/5 ms-2">
@@ -173,6 +182,7 @@ const UserProfile = () => {
                               alt="reviews"
                               className="  object-contain"
                               key={i}
+                              loading="lazy"
                             />
                           ))}
                         </div>

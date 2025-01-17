@@ -10,7 +10,9 @@ const StarRatings = ({ rating }) => {
         if (currentStar <= Math.floor(rating)) {
           return <FaStar key={index} className="text-yellow-400 text-sm" />; // Full star
         } else if (currentStar === Math.ceil(rating) && rating % 1 !== 0) {
-          return <FaStarHalfAlt key={index} className="text-yellow-400 text-sm" />; // Half star
+          return (
+            <FaStarHalfAlt key={index} className="text-yellow-400 text-sm" />
+          ); // Half star
         } else {
           return <FaRegStar key={index} className="text-gray-400 text-sm" />; // Empty star
         }

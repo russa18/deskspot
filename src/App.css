@@ -18,7 +18,7 @@
 nav,
 footer,
 .layout {
-  background:  #313131;
+  background: #313131;
 }
 
 .view-details-button {
@@ -153,13 +153,11 @@ button:active {
   transform: translateY(-50px) scale(0) rotate(120deg);
 }
 
-
-
-/* From Uiverse.io by reshades */ 
+/* From Uiverse.io by reshades */
 .booknow-button {
   background-color: #ffffff00;
   color: #fff;
-   border: #039e53 2px solid;
+  border: #039e53 2px solid;
   border-radius: 11px;
   text-align: right;
   transition: all 0.6s ease;
@@ -173,7 +171,7 @@ button:active {
 
 .booknow-button svg {
   width: 20px;
-   position: absolute;
+  position: absolute;
   display: flex;
   transition: all 0.6s ease;
 }
@@ -183,5 +181,5 @@ button:active {
 }
 
 .booknow-text {
-  margin: 0 0 0 1.5em 
+  margin: 0 0 0 1.5em;
 }

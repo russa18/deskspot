@@ -135,6 +135,7 @@ const Navbar = () => {
                   }
                   alt="profile"
                   className="rounded-full w-[3rem] h-[3rem] object-fill"
+                  loading="lazy"
                 />
               </div>
               <div

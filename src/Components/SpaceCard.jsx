@@ -12,12 +12,12 @@ const SpaceCard = ({ data, id }) => {
       className="rounded-lg bg-[#313131] cursor-pointer hover:shadow-lg transition-shadow"
       onClick={handleCardClick}
     >
-
       <div className="relative">
         <img
           src={data.profileImg}
           alt={data.name}
-          className="w-full h-[10rem] rounded-t-lg"
+          className="w-full h-[15rem]  md:h-[10rem] rounded-t-lg object-cover"
+          loading="lazy"
         />
         <div className="flex justify-between flex-col sm:flex-row sm:justify-between absolute bottom-0 w-full p-2 bg-opacity-50 bg-black text-white font-bold ">
           <p className="  p-1 rounded-lg">${data.price}/h</p>
@@ -33,7 +33,7 @@ const SpaceCard = ({ data, id }) => {
         </p>
         <p className="text-sm">{data.shortDescription}</p>
 
-        <div className="flex items-center justify-between   my-2  ">
+        <div className="flex items-center justify-between   my-2  mt-5">
           <button
             className="bg-[#039e53] hover:bg-green-500 transition-colors p-2 px-4 rounded-lg text-white font-bold text-sm  "
             onClick={(e) => {
@@ -49,7 +49,6 @@ const SpaceCard = ({ data, id }) => {
             onClick={(e) => {
               e.stopPropagation(); // Prevent propagation
               toast.info("Booking functionality will be implemented here!");
-              
             }}
           >
             <svg
